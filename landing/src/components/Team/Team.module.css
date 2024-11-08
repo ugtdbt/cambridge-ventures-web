@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+.leadershipTeamContainer {
+  display: flex;
+  gap: 20px;
+  justify-content:space-between;
+  padding: 40px 20px;
+  height: 300px;
+  width: 100%;
+
+}
+
+
+@media only screen and (max-width: 500px) {
+  .leadershipTeamContainer {
+    flex-direction: column;
+    height: auto;
+  }
+
+}
+
+.card {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 5px;
+  height: auto;
+  aspect-ratio: 339 / 435;
+  width: 40%;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-out;
+}
+
+.card:hover .image {
+  transform: scale(1);
+}
+
+.overlay {
+  position: absolute;
+  text-align: start;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: white;
+  padding: 20px;
+  animation-timing-function: ease-out;
+  box-sizing: border-box;
+  transition: max-height 0.3s ease, opacity 0.2s ease, background 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover .overlay {
+  background: linear-gradient(to top, #b67d43 0%, transparent 100%);
+  max-height: 100% !important;
+  opacity: 80%;
+}
+
+.name {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  line-height: 21.94px;
+  color: #ffffff;
+  transform: translateY(10px);
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.card:hover .name {
+  transform: translateY(0);
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 14px;
+  transition: opacity 0.3s ease-out;
+}
+
+.moreText,
+.readMore {
+  display: none;
+}
+
+.readMore {
+  text-align: end;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.moreText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.card:hover .moreText,
+.card:hover .readMore {
+  display: block;
+  font-size: 0.8rem;
+  margin: 5px 0 0;
+}
+
+.readMore {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.titleWrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.mainTitle{
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  text-align: start !important;
+  font-weight: 600;
+  color: #343434;
+}
+
+
+.subTitle{
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color:#6F6F6F;
+  text-align: start;
+}
