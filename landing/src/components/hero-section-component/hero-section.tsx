@@ -8,7 +8,6 @@ interface HeroSectionProps {}
 const HeroSection: React.FC<HeroSectionProps> = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Track scroll position
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 10) {
@@ -18,10 +17,7 @@ const HeroSection: React.FC<HeroSectionProps> = () => {
       }
     };
 
-    // Add scroll event listener
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
